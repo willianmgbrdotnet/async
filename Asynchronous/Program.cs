@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
 
 namespace Asynchronous
@@ -16,23 +17,39 @@ namespace Asynchronous
             thread.Start();
 
 
-            //Redimensionar();
-
-            System.Console.WriteLine("Tecle para fechar");
             Console.ReadKey();
 
         }
-        
+                
         static void Redimensionar()
         {
-            for (int i = 0; i < 10; i++)
+            #region "Diretórios"
+            var diretorioEntrada = "ArquivosEntrada";
+            var diretorioRedimensionados = "ArquivosRedimensionados";
+            var diretorioFinalizados = "ArquivosFinalizados";
+
+            //As pastas serão criadas caso não existam quando o método for executado.
+            if (!Directory.Exists(diretorioEntrada))
             {
-                System.Console.WriteLine(i);
+                Directory.CreateDirectory(diretorioEntrada);
+            }
+            if (!Directory.Exists(diretorioRedimensionados))
+            {
+                Directory.CreateDirectory(diretorioRedimensionados);
+            }
+            if (!Directory.Exists(diretorioFinalizados))
+            {
+                Directory.CreateDirectory(diretorioFinalizados);
+            }
+            #endregion            
+
+            /*while(true)
+            {
 
                 //Com o TimeSpan não é preciso calcular os milissegundos.
                 //Nesse formato temos (horas, minutos, segundos)                
                 Thread.Sleep(new TimeSpan(0, 0, 3));
-            }
+            }*/
         }
 
 
