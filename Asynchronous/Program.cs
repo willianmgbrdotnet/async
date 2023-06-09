@@ -42,18 +42,21 @@ namespace Asynchronous
             }
             #endregion 
 
-            //Nova altura da imagem em pixels
-            int tamanhoAltura = 200;
-
+            //A criação dos objetos foi feita fora do loop "while" para ele serem instanciados apenas uma vez.
+            FileStream fileStr;
+            FileInfo fileInf;
             while(true)
             {
+                //Nova altura da imagem em pixels
+                int tamanhoAltura = 200;
+                
                 //lendo ArquivosEntrada
                 var arquivosEntrada = Directory.EnumerateFiles(diretorioEntrada);
 
                 foreach (var arquivo in arquivosEntrada)
                 {
-                    FileStream fileStr = new FileStream(arquivo, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
-                    FileInfo fileInf = new FileInfo(arquivo);
+                    fileStr = new FileStream(arquivo, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
+                    fileInf = new FileInfo(arquivo);
 
                     //Diretório Local(pasta atual)\Pasta de Destino\Nome do Arquivo Original
                     string caminho = Environment.CurrentDirectory + @"\" + diretorioRedimensionados + @"\" + fileInf.Name;
