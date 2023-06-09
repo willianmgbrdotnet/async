@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "TMOdqU/lDmXem6qsWrYL24fpvqX7HOmfyjCORt050Oj83xkHoj44pvePmVU+BAd3kXmB9zTWAgO+Jdi1XU4UDg==",
+  "dgSpecHash": "V17GyNblpYuMYi567RfNTimkSi8Lh9VHO6EhcsSQejGD0FMxS8UVZSqIXcEfGNzSH9LKEibAZPuYcu+zIrEseA==",
   "success": true,
   "projectFilePath": "C:\\c#\\async\\Asynchronous\\Asynchronous.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\system.drawing.common\\5.0.3\\system.drawing.common.5.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
